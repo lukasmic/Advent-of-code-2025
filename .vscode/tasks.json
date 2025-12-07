@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-single-file",
+      "command": "dotnet",
+      "type": "shell",
+      "args": [
+        "build",
+        "${file}",             // Builds the currently open file
+        "-o",                  // Output to a specific folder
+        "${workspaceFolder}/bin/Debug",
+        "/p:AssemblyName=${fileBasenameNoExtension}" // Ensure DLL name matches file
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

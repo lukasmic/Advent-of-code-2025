@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Single File (.NET 10)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-single-file",  // Runs the task above first
+      "program": "${workspaceFolder}/bin/Debug/${fileBasenameNoExtension}.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole"           // Use "integratedTerminal" if you need input
+    }
+  ]
+}
