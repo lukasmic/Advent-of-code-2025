@@ -1,6 +1,3 @@
-using System.Data;
-using System.Dynamic;
-
 var manifold = new TachyonManifold();
 
 using (var file = new StreamReader("7/7-input.txt"))

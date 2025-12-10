@@ -1,6 +1,3 @@
-using System.Data;
-using System.Dynamic;
-
 var manifold = new TachyonManifold();
 
 using (var file = new StreamReader("7-input.txt"))
@@ -61,7 +58,7 @@ internal class TachyonManifold
         for (int i = 0; i < TachyonManifold.Instance.Griddy.Count - 1; i++)
         {
             Dictionary<(int X, int Y), Beamer> newBeamDic = new();
-            
+
             foreach (var beamer in beamDict.Values)
             {
                 var beaminResult = beamer.Beam();
@@ -137,7 +134,8 @@ class Beamer
             return result;
         }
 
-        if (target == '|'){
+        if (target == '|')
+        {
             result.Add(new Beamer { Y = Y + 1, X = X, PathCount = this.PathCount });
             return result;
         }
